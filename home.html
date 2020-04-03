@@ -3,14 +3,17 @@
     <head>
     <title>DOGERATER</title>
     <link rel="stylesheet" href="otherstyle.css">
-    <script>if( navigator.userAgent.match(/Andriod|iPhone|iPad|iPod/i) ) {
-        var elem = document.getElementById("text");
-        elem.style.marginLeft = "0%";
-        elem.style.marginLeft = "0%";
-    }
+    <script>
+        function iOS() {
+            if( navigator.userAgent.match(/Andriod|iPhone|iPad|iPod/i) ) {
+                var elem = document.getElementById("text");
+                elem.style.marginLeft = "0%";
+                elem.style.marginRight = "0%";
+            }
+        }
     </script>
     </head>
-<body>
+<body onload="iOS()">
         <nav>
             <ul>
                 <li><a href="home.html">HOME</a></li>
