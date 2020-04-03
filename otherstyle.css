@@ -9,9 +9,6 @@ html, body {
     height: 100%;
     width: 100%
 }
-body {
-    width 60%;
-}
 nav a {
     text-align: center;
     font-size: x-large;
@@ -32,5 +29,5 @@ li {
 }
 #text {
     margin-left: 5%;
-    margin-right: 10%;
+    margin-right: 35%;
 }
