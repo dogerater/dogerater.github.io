@@ -2,29 +2,6 @@
 <html>
     <head>
     <link rel="stylesheet" href="otherstyle.css">
-    <script>
-        document.querySelector('.file-select').addEventListener('change', handleFileUploadChange);
-        document.querySelector('.file-submit').addEventListener('click', handleFileUploadChange);
-
-        let selectedFile;
-        handleFileUploadChange(e) {
-            selectedFile = e.target.files[0];
-        }
-
-        handleFileUploadSubmit(e) {
-
-            const uploadTask = storageRef.child(`images/${selectedFile.name}`).put(selectedFile); //create a child directory called images, and place the file inside this directory
-            uploadTask.on('state_changed', (snapshot) => {
-                // Observe state change events such as progress, pause, and resume
-            }, (error) => {
-                // Handle unsuccessful uploads
-                console.log(error);
-            }, () => {
-                //Do something once upload is complete
-                console.log('success');
-            });
-        }
-    </script>
     </head>
 <body>
         <nav>
@@ -41,7 +18,10 @@
             </div>
             <div id="filesubmit">
                 <input type="file" class="file-select" accept="image/*"/>
-                <button class="file-submit">UPLOAD DOGGO</button>
+                <!-- <button class="file-submit">UPLOAD DOGGO</button> -->
+                <!-- <form enctype="multipart/form-data" action="/upload/image" method="post">
+                    <input id="image-file" type="file" />
+                </form> -->
             </div>
             <div>
                 <h1>What is the ELO System?</h1>
@@ -65,7 +45,7 @@
                 </p>
                 <p>
                     [Result of the game (1 for a “win” against another dog and 0 for a “loss”) - Expected Probability]
-    * k-Factor (which is a value dependent on rating, win percentage, and number of competitive “matches”). Where Expected Probability is given by 1/(1+10^((opponentRating- yourRating)/400)).
+    * k-Factor (which is a value dependent on rating, win percentage, and number of competitive “matches”). Where Expected Probability is given by 1/(1+10 <sup>(opponentRating- yourRating)/400</sup>).
                 </p>
                 <p>
                     Example: If dog A has ELO = 1600 and is chosen as cuter than dog B with ELO = 1200,
@@ -75,7 +55,7 @@
                     Dog A’s expected probability was 
                 </p>
                 <p>
-                    1/(1+10^((1200-1600)/400)) = 1/(1+10^(-400/400)) = 1/(1+10^-1) = 1/1.1= .91 
+                    1/(1+10 <sup>(1200-1600)/400</sup>) = 1/(1+10 <sup>-400/400</sup>) = 1/(1+10 <sup>-1</sup>) = 1/1.1= .91 
                 </p>
                 <p>
                     If we assume dog A has a k-factor of 30, then we have a rating change of (1 - .91) * 30 = 2.7 which rounds up to 3 points.
