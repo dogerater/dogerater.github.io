@@ -52,12 +52,12 @@
                     In our game, the dogs being compared have been assigned a baseline ELO rating based on an algorithmic analysis. Your selection of which dog is cuter in a head-to-head matchup leads to a correction in their ELO ratings according to the following formula.
                 </p>
                 <p>
-                    [Result of the game (1 for a “win” against another dog and 0 for a “loss”) - Expected Probability] * k-Factor (which is a value dependent on rating, win percentage, and number of competitive “matches”). Where Expected Probability is given by 1/(1+10 <sup>(opponentRating- yourRating)/400</sup>).
+                    [Result of the game (1 for a "win" against another dog and 0 for a "loss") - Expected Probability] * k-Factor (which is a value dependent on rating, win percentage, and number of competitive "matches"). Where Expected Probability is given by 1/(1+10 <sup>(opponentRating - yourRating)/400</sup>).
                 </p>
                 <p>
                     Example: If dog A has ELO = 1600 and is chosen as cuter than dog B with ELO = 1200, then 
 
-                    Dog A’s expected probability was 
+                    Dog A's expected probability was 
 
                     1/(1+10 <sup>(1200-1600)/400</sup>) = 1/(1+10 <sup>-400/400</sup>) = 1/(1+10 <sup>-1</sup>) = 1/1.1= .91 
 
