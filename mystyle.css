@@ -38,17 +38,19 @@ img {
     max-width: 50%;
     float: left;
 }
-#dog-1-text #dog-2-text #vs {
+#dog-1-text {
     position: absolute;
+    left: 25%;
     top: 50%;
 }
-#dog-1-text {
-    left: 25%;
-}
 #dog-2-text {
+    position: absolute;
     right: 25%;
+    top: 50%;
 }
 #vs {
+    position: absolute;
     left: 50%;
+    top: 50%;
 }
 
