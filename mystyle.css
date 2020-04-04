@@ -15,12 +15,13 @@ nav a {
     font-family: sans-serif;
     color: #ffffff;
     margin-top: 0;
-    font-style: normal;
     text-decoration: none;
 }
 ul {
     list-style: none;
     text-align: center;
+    margin: 0;
+    padding: 1%;
 }
 ul li {
     display: inline;
@@ -30,21 +31,19 @@ li {
 }
 #left-image {
     float: left;
-    background-image: url('/images/dog1.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 50%;
     height: 100%;
     padding-bottom: 5%;
 }
 #right-image {
     float: right;
-    background-image: url('/images/dog2.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 50%;
     height: 100%;
     padding-bottom: 5%;
+}
+img {
+    padding-bottom: 5%;
+    display: inline-block;
 }
 #vs {
     display: inline;
