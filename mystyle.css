@@ -34,7 +34,7 @@ li {
     height: 100%;
 }
 img {
-    width: 50%;
+    max-width: 50%;
     display: inline-block;
 }
 #vs {

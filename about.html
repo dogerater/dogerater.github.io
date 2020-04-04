@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head><title>DOGERATER</title><link rel="stylesheet" href="otherstyle.css">
-    <script>if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-        var elem = document.getElementById("text");
-        elem.style.marginLeft = "0%";
-        elem.style.marginRight = "0%";
-    }
+    <script>
+        function iOS() {
+            if( navigator.userAgent.match(/Android|iPhone/i) !== null ) {
+                var elem = document.getElementById("text");
+                elem.style.marginLeft = "0%";
+                elem.style.marginRight = "0%";
+            }
+        }
     </script>
 </head>
 <body>
