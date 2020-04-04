@@ -37,6 +37,7 @@ li {
 img {
     max-width: 50%;
     float: left;
+    position: relative;
 }
 #dog-1-text {
     position: absolute;
