@@ -35,7 +35,7 @@ li {
 }
 img {
     max-width: 50%;
-    display: inline-block;
+    float: left;
 }
 #vs {
     display: inline;
