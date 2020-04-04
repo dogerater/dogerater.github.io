@@ -1,11 +1,11 @@
 class Dog {
   
 	constructor(rating, gamesPlayed, kFactor, wPerc, image) {
-		this.rating = rating;
-		this.gamesPlayed = gamesPlayed;
-		this.kFactor = kFactor;
-		this.wPerc = wPerc;
-		this.image = image;
+		this._rating = rating;
+		this._gamesPlayed = gamesPlayed;
+		this._kFactor = kFactor;
+		this._wPerc = wPerc;
+		this._image = image;
 	}
 	get rating() {
 		return this._rating;
