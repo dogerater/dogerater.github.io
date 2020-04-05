@@ -34,20 +34,16 @@ li {
     height: 100%;
     position: relative;
 }
-img {
+.image-wrapper {
     max-width: 50%;
     float: left;
     position: relative;
+    height: 100%;
 }
-#dog-1-text {
+.text {
     position: absolute;
-    left: 25%;
-    top: 50%;
-}
-#dog-2-text {
-    position: absolute;
-    right: 25%;
-    top: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 #vs {
     position: absolute;
