@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-    document.getElementById("image").style.height = document.body - document.getElementById("menu").style.height;
+    document.getElementById("image").style.height = document.body.style.height - document.getElementById("menu").style.height;
 });
 
 
