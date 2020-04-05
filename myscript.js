@@ -1,5 +1,9 @@
+window.addEventListener('load', function() {
+    document.getElementById("image").style.height = document.body - document.getElementById("menu").style.height;
+});
+
+
 class Dog {
-  
 	constructor(rating, gamesPlayed, kFactor, wPerc, image) {
 		this._rating = rating;
 		this._gamesPlayed = gamesPlayed;
