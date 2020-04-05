@@ -31,13 +31,12 @@ li {
 }
 #image {
     width: 100%;
-    bottom: 0;
+    height: 100%;
     position: relative;
 }
 img {
     max-width: 50%;
     float: left;
-    position: relative;
 }
 .text {
     top: 50%;
