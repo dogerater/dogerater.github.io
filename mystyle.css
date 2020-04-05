@@ -39,18 +39,17 @@ img {
     float: left;
     position: relative;
 }
-#dog-1-text {
-    position: absolute;
-    left: 25%;
+.text {
     top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+#dog-1-text {
+    left: 25%;
 }
 #dog-2-text {
-    position: absolute;
     right: 25%;
-    top: 50%;
 }
 #vs {
-    position: absolute;
     left: 50%;
-    top: 50%;
 }
