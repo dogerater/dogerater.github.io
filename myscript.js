@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-    document.getElementById("image").style.height = document.body.style.height - document.getElementById("menu").style.height;
+    document.getElementById("image").style.height = (document.body.clientHeight - document.getElementById("menu").clientHeight).toString() + "px";
 });
 
 
@@ -64,12 +64,12 @@ var dog2 = new Dog(1200, 4, 25, 0.8, "/images/dog2.jpeg");
 
 window.addEventListener('load', function() {
     document.getElementById("left-image").onclick = function(event) {
-	    document.getElementById("left-image").innerHTML = dog.rating;
-		document.getElementById("right-image").innerHTML = dog2.rating;
+	    document.getElementById("dog-1-text").innerHTML = dog.rating;
+		document.getElementById("dog-2-text").innerHTML = dog2.rating;
 	    setTimeout(function () {
 			setTimeout(function () {
-				document.getElementById("left-image").innerHTML = calculate(dog.rating, dog2.rating, true);
-				document.getElementById("right-image").innerHTML = calculate(dog2.rating, dog.rating, true);
+				document.getElementById("dog-1-text").innerHTML = calculate(dog.rating, dog2.rating, true);
+				document.getElementById("dog-2-text").innerHTML = calculate(dog2.rating, dog.rating, true);
 				setTimeout(function () {
 					loadNewMatchup(true)
 				}, 1000)
@@ -89,7 +89,7 @@ function calculate(left, right, bool) {
     return left - 15;
 }
 function loadNewMatchup(bool) {
-	document.getElementById("left-image").style.backgroundImage = "url('/images/dog2.jpeg')";
+	document.getElementById("left-image").src = "/images/dog2.jpeg";
 }
 function probability(curr, opp){
 	return 1.0/(1.0 + Math.pow(10, (opp - curr)/400));
