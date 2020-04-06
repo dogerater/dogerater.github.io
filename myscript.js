@@ -2,13 +2,6 @@ window.addEventListener('load', function() {
     document.getElementById("image").style.height = (document.body.clientHeight - document.getElementById("menu").clientHeight).toString() + "px";
 });
 
-function sleep(ms) {
-	let counter = 0;
-	while (counter < ms) {
-		settime
-	};
-}
-
 class Dog {
 	constructor(rating, gamesPlayed, kFactor, wPerc, image) {
 		this._rating = rating;
@@ -56,6 +49,7 @@ window.addEventListener('load', function() {
     document.getElementById("left-image").onclick = function(event) {
 		var leftText = document.getElementById("dog-1-text");
 		var rightText = document.getElementById("dog-2-text");
+		
 	    leftText.innerHTML = dog.rating;
 		rightText.innerHTML = dog2.rating;
 	    setTimeout(function () {

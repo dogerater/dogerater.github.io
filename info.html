@@ -22,68 +22,61 @@
             </ul>
         </nav>
         <div id="text">
-            <div id="info">
-                <h1>Info</h1>
-            </div>
-            <div>
-                <h1>What is the ELO System?</h1>
-                <p>
-                    The ELO system was created by and named after Arpad Elo, a Hungarian-American physicist. Originally, it was intended to accurately assess the playing strength of members of the United States Chess Federation (USCF). Many players simply didn’t believe that disparate tournament results could provide a representative view of their playing strength and wanted a more precise system that could better reflect their true ability relative to other players.
-                </p>
-                <p>
-                    Due to the demands of their constituents, the USCF hired Elo to craft a statistically sound rating system to replace prior attempts (which often led to the establishment of ratings considered erroneous)  at creating a universal methodology that would inspire confidence in players with its fairness and simplicity.
-                </p>
-                <p>
-                    With those goals in mind, Elo formulated a procedure that took into account the difference in ratings between the two competitors to determine a probabilistic prediction for the outcome of a match. The winner of the match would then gain points dependent on the difference in ratings (with victory against a much lower rated foe leading to a minor increase in rating whereas beating a vastly higher rated opponent would result in a significant gain of rating points) and the loser would lose points similarly directly dependent on the difference in ratings. 
-                </p>
-                <p>
-                    Elo made quite a few simplifying assumptions in his model, but the simplicity with which his formula could be applied invariably led players to feel it was fair and accurate. 
-                </p>
-                <p>
-                    Today, the ELO system has been expanded to assess performance and relative strength in a variety of competitive pursuits including the NBA, MLB,  NFL, MLS, as well as in e-sports. 
-                </p>
-                <p>
-                    In our game, the dogs being compared have been assigned a baseline ELO rating based on an algorithmic analysis. Your selection of which dog is cuter in a head-to-head matchup leads to a correction in their ELO ratings according to the following formula.
-                </p>
-                <p>
-                    [Result of the game (1 for a "win" against another dog and 0 for a "loss") - Expected Probability] * k-Factor (which is a value dependent on rating, win percentage, and number of competitive "matches"). Where Expected Probability is given by 1/(1+10 <sup>(opponentRating - yourRating)/400</sup>).
-                </p>
-                <p>
-                    Example: If dog A has ELO = 1600 and is chosen as cuter than dog B with ELO = 1200, then 
+            <h1>Info</h1>
+            <h1>What is the ELO System?</h1>
+            <p>
+                The ELO system was created by and named after Arpad Elo, a Hungarian-American physicist. Originally, it was intended to accurately assess the playing strength of members of the United States Chess Federation (USCF). Many players simply didn’t believe that disparate tournament results could provide a representative view of their playing strength and wanted a more precise system that could better reflect their true ability relative to other players.
+            </p>
+            <p>
+                Due to the demands of their constituents, the USCF hired Elo to craft a statistically sound rating system to replace prior attempts (which often led to the establishment of ratings considered erroneous)  at creating a universal methodology that would inspire confidence in players with its fairness and simplicity.
+            </p>
+            <p>
+                With those goals in mind, Elo formulated a procedure that took into account the difference in ratings between the two competitors to determine a probabilistic prediction for the outcome of a match. The winner of the match would then gain points dependent on the difference in ratings (with victory against a much lower rated foe leading to a minor increase in rating whereas beating a vastly higher rated opponent would result in a significant gain of rating points) and the loser would lose points similarly directly dependent on the difference in ratings. 
+            </p>
+            <p>
+                Elo made quite a few simplifying assumptions in his model, but the simplicity with which his formula could be applied invariably led players to feel it was fair and accurate. 
+            </p>
+            <p>
+                Today, the ELO system has been expanded to assess performance and relative strength in a variety of competitive pursuits including the NBA, MLB,  NFL, MLS, as well as in e-sports. 
+            </p>
+            <p>
+                In our game, the dogs being compared have been assigned a baseline ELO rating based on an algorithmic analysis. Your selection of which dog is cuter in a head-to-head matchup leads to a correction in their ELO ratings according to the following formula.
+            </p>
+            <p>
+                [Result of the game (1 for a "win" against another dog and 0 for a "loss") - Expected Probability] * k-Factor (which is a value dependent on rating, win percentage, and number of competitive "matches"). Where Expected Probability is given by 1/(1+10 <sup>(opponentRating - yourRating)/400</sup>).
+            </p>
+            <p>
+                Example: If dog A has ELO = 1600 and is chosen as cuter than dog B with ELO = 1200, then 
 
-                    Dog A's expected probability was 
+                Dog A's expected probability was 
 
-                    1/(1+10 <sup>(1200-1600)/400</sup>) = 1/(1+10 <sup>-400/400</sup>) = 1/(1+10 <sup>-1</sup>) = 1/1.1= .91 
+                1/(1+10 <sup>(1200-1600)/400</sup>) = 1/(1+10 <sup>-400/400</sup>) = 1/(1+10 <sup>-1</sup>) = 1/1.1= .91 
 
-                    If we assume dog A has a k-factor of 30, then we have a rating change of (1 - .91) * 30 = 2.7 which rounds up to 3 points.
+                If we assume dog A has a k-factor of 30, then we have a rating change of (1 - .91) * 30 = 2.7 which rounds up to 3 points.
 
-                    Therefore, dog A has a new rating of 1603.
-                </p>
-            </div>
-            <div id="history">
-                <h1>History</h1>
-                <p>
-                    This game was created by four Brown University freshman friends who are dog lovers. It was created for Hack@Brown 2020. We hope you enjoy all these cute dog photos and learn a bit about the ELO system!
-                </p>
-            </div>
-            <div id="bios">
-                <h1>About Us</h1>
-                <p>
-                    Tieran "Chai" McClure: Tieran has been the CEO of BOFA since 1:00 p.m. on January 25th, 2020. He enjoys underwater skydiving and freefall lawn mowing in his free time. He’s also renowned for directing several public service PSA announcements. Please show up at his house uninvited with your business inquiries.
-                </p>
-                <p>
-                    Anoop "Blue Ricky" Manjal: Before working at BOFA, Anoop was a world-famous gnome hunter in Iceland. At night, Anoop can be found gliding in the sky with his local herd of flying squirrels. He is currently looking for a place to store his acorns; if you worship a vacant tree, please contact him at bing.com. 
-                </p>
-                <p>
-                    Jason "Activities" Eveleth: Jason has been the CTO of BOFA since 1:01p.m. on January 25th Outside of BOFA, Jason moonlights as a stay at home tourist. Jason is looking for an oceanfront house in downtown Kansas City with precisely 13 half-bathrooms. Please contact him at @gmail.com if you know you know. 
-                </p>
-                <p>
-                    Ziwen "Cleveland Z" Zhou: Ziwen is the CFO of BOFA. Please contact him, we don't know where he is.
-                </p>
-            </div>
-            <div>
-                <img src="/images/Squad2.jpeg" width= "100%" />
-            </div>
+                Therefore, dog A has a new rating of 1603.
+            </p>
+
+            <h1>History</h1>
+            <p>
+                This game was created by four Brown University freshman friends who are dog lovers. It was created for Hack@Brown 2020. We hope you enjoy all these cute dog photos and learn a bit about the ELO system!
+            </p>
+
+            <h1>About Us</h1>
+            <p>
+                Tieran "Chai" McClure: Tieran has been the CEO of BOFA since 1:00 p.m. on January 25th, 2020. He enjoys underwater skydiving and freefall lawn mowing in his free time. He’s also renowned for directing several public service PSA announcements. Please show up at his house uninvited with your business inquiries.
+            </p>
+            <p>
+                Anoop "Blue Ricky" Manjal: Before working at BOFA, Anoop was a world-famous gnome hunter in Iceland. At night, Anoop can be found gliding in the sky with his local herd of flying squirrels. He is currently looking for a place to store his acorns; if you worship a vacant tree, please contact him at bing.com. 
+            </p>
+            <p>
+                Jason "Activities" Eveleth: Jason has been the CTO of BOFA since 1:01p.m. on January 25th Outside of BOFA, Jason moonlights as a stay at home tourist. Jason is looking for an oceanfront house in downtown Kansas City with precisely 13 half-bathrooms. Please contact him at @gmail.com if you know you know. 
+            </p>
+            <p>
+                Ziwen "Cleveland Z" Zhou: Ziwen is the CFO of BOFA. Please contact him, we don't know where he is.
+            </p>
+
+            <img src="/images/Squad2.jpeg" width= "100%" />
         </div>
     </body>
 </html>
