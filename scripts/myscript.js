@@ -55,9 +55,9 @@ window.addEventListener('load', function() {
 		// console.log("dog1: " + dog.rating.toString() + "dog2: " + dog2.rating.toString());
 		// console.log("new dog1: " + calculate(dog.rating, dog2.rating, true) + "dog2: " + calculate(dog2.rating, dog.rating, true));
 		var numberSix = 0;
-		while (numberSix <= 6) {
+		while (numberSix < 6) {
 			console.log(numberSix);
-			setTimeout(() => { numberSix++; }, 100);
+			setTimeout(function() { numberSix++; }, 1000);
 		}
 		// while (leftText.innerHTML > calculate(dog.rating, dog2.rating, true)) {
 		// 	setTimeout(function() { leftText.innerHTML--; }, 100);
