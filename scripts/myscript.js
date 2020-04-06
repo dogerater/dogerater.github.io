@@ -58,6 +58,7 @@ window.addEventListener('load', function() {
 });
 
 window.addEventListener('load', function() {
+	this.console.log("2");
 	vs.onclick = loadNewMatchup(true);
 });
 
