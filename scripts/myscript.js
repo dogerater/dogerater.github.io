@@ -52,15 +52,14 @@ window.addEventListener('load', function() {
 		
 	    leftText.innerHTML = dog.rating;
 		rightText.innerHTML = dog2.rating;
-	    setTimeout(function () {
+		while (leftText.innerHTML < calculate(dog.rating, dog2.rating, true) || 
+		rightText.innerHTML > calculate(dog2.rating, dog.rating, true)) {
 			setTimeout(function () {
-				leftText.innerHTML = calculate(dog.rating, dog2.rating, true);
-				rightText.innerHTML = calculate(dog2.rating, dog.rating, true);
-				setTimeout(function () {
-					loadNewMatchup(true)
-				}, 1000)
-			}, 1000)
-	    }, 1000)
+				leftText.innerHTML += 1;
+				rightText.innerHTML -= 1;
+			}, 10);
+		};
+		loadNewMatchup(true);
     };
 });
 
