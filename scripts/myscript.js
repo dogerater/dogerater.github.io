@@ -58,7 +58,7 @@ window.addEventListener('load', function() {
 });
 
 window.addEventListener('load', function() {
-	document.getElementById("VS").onclick = loadNewMatchup(true);
+	vs.onclick = loadNewMatchup(true);
 });
 
 function leftWins() {
