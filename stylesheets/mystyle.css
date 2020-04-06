@@ -2,7 +2,7 @@ html {
     overflow-y: scroll;
 }
 html, body {
-    background-color: #000000;
+    background-color: #000;
     margin: 0px;
     padding: 0px;
     border-width: 0px;
@@ -19,7 +19,7 @@ nav a {
     margin: 0% 5% 0%; /* top, left and right, bottom */
     font-size: x-large;
     font-family: sans-serif;
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
 }
 #game-wrapper {
@@ -45,5 +45,5 @@ img {
 }
 #vs {
     left: 50%;
-    background-color: #ffffff;
+    background-color: #fff;
 }

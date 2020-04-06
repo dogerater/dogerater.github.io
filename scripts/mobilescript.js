@@ -1,3 +1,5 @@
+window.addEventListener('load', iOS);
+
 function iOS() {
     if( navigator.userAgent.match(/Android|iPhone/i) !== null ) {
         var elem = document.getElementById("text");
