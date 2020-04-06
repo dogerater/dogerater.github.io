@@ -52,17 +52,13 @@ window.addEventListener('load', function() {
 		
 	    leftText.innerHTML = dog.rating;
 		rightText.innerHTML = dog2.rating;
-		console.log("dog1: " + dog.rating.toString() + "dog2: " + dog2.rating.toString())
-		console.log("new dog1: " + calculate(dog.rating, dog2.rating, true) + "dog2: " + calculate(dog2.rating, dog.rating, true))
-		while (leftText.innerHTML < calculate(dog.rating, dog2.rating, true)) {
-			setTimeout(function () {
-				leftText.innerHTML = leftText.innerHTML + 1;
-			}, 100);
-		};
-		while (rightText.innerHTML > calculate(dog2.rating, dog.rating, true)) {
-			setTimeout(function () {
-				rightText.innerHTML = rightText.innerHTML - 1;
-			}, 100);
+		console.log("dog1: " + dog.rating.toString() + "dog2: " + dog2.rating.toString());
+		console.log("new dog1: " + calculate(dog.rating, dog2.rating, true) + "dog2: " + calculate(dog2.rating, dog.rating, true));
+		while (leftText.innerHTML > calculate(dog.rating, dog2.rating, true)) {
+			setTimeout(function() { leftText.innerHTML--; }, 100);
+		}
+		while (rightText.innerHTML < calculate(dog2.rating, dog.rating, true)) {
+			setTimeout(function() { rightText.innerHTML++; }, 100);
 		}
 		loadNewMatchup(true);
     };
