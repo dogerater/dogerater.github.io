@@ -46,5 +46,6 @@ img {
 }
 #vs {
     left: 50%;
+    text-transform: uppercase;
     background-color: #fff;
 }

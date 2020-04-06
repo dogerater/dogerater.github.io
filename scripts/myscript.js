@@ -47,13 +47,18 @@ var dog2 = new Dog(1200, 4, 25, 0.8, "/images/dog2.jpeg");
 
 var leftText = document.getElementById("dog-1-text");
 var rightText = document.getElementById("dog-2-text");
+var vs = document.getElementById("vs");
 window.addEventListener('load', function() {
     document.getElementById("left-image").onclick = function(event) {
 		leftText.innerHTML = dog.rating;
 		rightText.innerHTML = dog2.rating;
 		leftWins();
-		loadNewMatchup(true);
+		vs.innerHTML = "Next";
 	};
+});
+
+window.addEventListener('load', function() {
+	document.getElementById("VS").onclick = loadNewMatchup(true);
 });
 
 function leftWins() {
