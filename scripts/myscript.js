@@ -57,12 +57,10 @@ window.addEventListener('load', function() {
 
 function leftWins() {
 	if (leftText.innerHTML > calculate(dog.rating, dog2.rating, true)) {
-		setTimeout(function() { leftText.innerHTML--; }, 100);
-		leftWins();
+		setTimeout(function() { leftText.innerHTML--; leftWins(); }, 100);
 	}
 	if (rightText.innerHTML < calculate(dog2.rating, dog.rating, true)) {
-		setTimeout(function() { rightText.innerHTML++; }, 100);
-		leftWins();
+		setTimeout(function() { rightText.innerHTML++; leftWins(); }, 100);
 	}
 	loadNewMatchup(true);
 }
