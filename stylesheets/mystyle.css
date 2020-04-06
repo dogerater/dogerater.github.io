@@ -9,25 +9,17 @@ html, body {
     height: 100%;
     width: 100%
 }
+nav {
+    margin: 0;
+    padding: 1%;
+}
 nav a {
     text-align: center;
     font-size: x-large;
     font-family: sans-serif;
     color: #ffffff;
-    margin-top: 0;
     text-decoration: none;
-}
-ul {
-    list-style: none;
-    text-align: center;
-    margin: 0;
-    padding: 1%;
-}
-ul li {
     display: inline;
-}
-li {
-    margin: 5%;
 }
 #image {
     width: 100%;
