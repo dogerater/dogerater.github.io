@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-    document.getElementById("image").style.height = (document.body.clientHeight - document.getElementById("menu").clientHeight).toString() + "px";
+    document.getElementById("game-wrapper").style.height = (document.body.clientHeight - document.getElementById("menu").clientHeight).toString() + "px";
 });
 
 class Dog {

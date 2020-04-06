@@ -9,28 +9,18 @@ html, body {
     height: 100%;
     width: 100%
 }
-nav a {
+nav {
+    margin: 0;
+    padding: 1%;
     text-align: center;
+}
+nav a {
+    display: inline;
+    margin: 0% 5% 0%; /* top, left and right, bottom */
     font-size: x-large;
     font-family: sans-serif;
     color: #ffffff;
-    margin-top: 0;
     text-decoration: none;
-}
-nav ul {
-    background-color: #000000;
-}
-ul {
-    list-style: none;
-    text-align: center;
-    margin: 0;
-    padding: 1%;
-}
-ul li {
-    display: inline;
-}
-li {
-    margin: 5%;
 }
 #text {
     margin-left: 22%;
