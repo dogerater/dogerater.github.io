@@ -41,15 +41,16 @@ class Dog {
 		this._image = x;
 	}
 }
-
+// DECLARING VARIABLES
 var dog = new Dog(1500, 10, 30, 0.8, "/images/dog1.jpeg");
 var dog2 = new Dog(1200, 4, 25, 0.8, "/images/dog2.jpeg");
 
 var leftText = document.getElementById("dog-1-text");
 var rightText = document.getElementById("dog-2-text");
 var vs = document.getElementById("vs");
+var leftImage = document.getElementById("left-image");
 window.addEventListener('load', function() {
-    document.getElementById("left-image").onclick = function(event) {
+    leftImage.onclick = function(event) {
 		leftText.innerHTML = dog.rating;
 		rightText.innerHTML = dog2.rating;
 		leftWins();
@@ -58,8 +59,9 @@ window.addEventListener('load', function() {
 });
 
 window.addEventListener('load', function() {
-	this.console.log("2");
-	vs.onclick = loadNewMatchup(true);
+	vs.onclick = function(event) {
+		loadNewMatchup(true);
+	};
 });
 
 function leftWins() {
@@ -71,17 +73,11 @@ function leftWins() {
 	}
 }
 
-window.addEventListener('load', function() {
-    document.getElementById("right-image").onclick = function(event) {
-        alert("This was my senior quote");
-    };
-});
-
 function calculate(left, right, bool) {
     return left - 15;
 }
 function loadNewMatchup(bool) {
-	document.getElementById("left-image").src = "/images/dog2.jpeg";
+	leftImage.src = "/images/dog2.jpeg";
 }
 function probability(curr, opp){
 	return 1.0/(1.0 + Math.pow(10, (opp - curr)/400));
