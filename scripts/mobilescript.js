@@ -1,4 +1,4 @@
-window.addEventListener('load', iOS);
+window.addEventListener('load', iOS());
 
 function iOS() {
     if( navigator.userAgent.match(/Android|iPhone/i) !== null ) {
