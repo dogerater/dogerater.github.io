@@ -2,6 +2,12 @@ window.addEventListener('load', function() {
     document.getElementById("image").style.height = (document.body.clientHeight - document.getElementById("menu").clientHeight).toString() + "px";
 });
 
+function sleep(ms) {
+	let counter = 0;
+	while (counter < ms) {
+		settime
+	};
+}
 
 class Dog {
 	constructor(rating, gamesPlayed, kFactor, wPerc, image) {
@@ -44,32 +50,18 @@ class Dog {
 }
 
 var dog = new Dog(1500, 10, 30, 0.8, "/images/dog1.jpeg");
-// var dog = {
-//     image: "/images/dog1.jpeg",
-//     kValue: 30, //add ½ and floor it in order to get the lowest integer
-//     id: 12345678,
-//     eLO: 1500,
-//     gamesPlayed: 10,
-// 	wPerc: 0.8,
-// }
-// var dog2 = {
-//     image: "/images/dog2.jpeg",
-//     kValue: 25, //add ½ and floor it in order to get the lowest integer
-//     id: 12345679,
-//     eLO: 1200,
-// 	gamesPlayed: 4,
-// 	wPerc: 0.8,
-// }
 var dog2 = new Dog(1200, 4, 25, 0.8, "/images/dog2.jpeg");
 
 window.addEventListener('load', function() {
     document.getElementById("left-image").onclick = function(event) {
-	    document.getElementById("dog-1-text").innerHTML = dog.rating;
-		document.getElementById("dog-2-text").innerHTML = dog2.rating;
+		var leftText = document.getElementById("dog-1-text");
+		var rightText = document.getElementById("dog-2-text");
+	    leftText.innerHTML = dog.rating;
+		rightText.innerHTML = dog2.rating;
 	    setTimeout(function () {
 			setTimeout(function () {
-				document.getElementById("dog-1-text").innerHTML = calculate(dog.rating, dog2.rating, true);
-				document.getElementById("dog-2-text").innerHTML = calculate(dog2.rating, dog.rating, true);
+				leftText.innerHTML = calculate(dog.rating, dog2.rating, true);
+				rightText.innerHTML = calculate(dog2.rating, dog.rating, true);
 				setTimeout(function () {
 					loadNewMatchup(true)
 				}, 1000)
