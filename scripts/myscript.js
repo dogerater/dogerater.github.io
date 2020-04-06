@@ -45,36 +45,33 @@ class Dog {
 var dog = new Dog(1500, 10, 30, 0.8, "/images/dog1.jpeg");
 var dog2 = new Dog(1200, 4, 25, 0.8, "/images/dog2.jpeg");
 
+var leftText = document.getElementById("dog-1-text");
+var rightText = document.getElementById("dog-2-text");
 window.addEventListener('load', function() {
     document.getElementById("left-image").onclick = function(event) {
-		var leftText = document.getElementById("dog-1-text");
-		var rightText = document.getElementById("dog-2-text");
-		
-	    leftText.innerHTML = dog.rating;
+		leftText.innerHTML = dog.rating;
 		rightText.innerHTML = dog2.rating;
-		// console.log("dog1: " + dog.rating.toString() + "dog2: " + dog2.rating.toString());
-		// console.log("new dog1: " + calculate(dog.rating, dog2.rating, true) + "dog2: " + calculate(dog2.rating, dog.rating, true));
-		var numberSix = 0;
-		while (numberSix < 6) {
-			console.log(numberSix);
-			setTimeout(function() { numberSix++; }, 1000);
-		}
-		// while (leftText.innerHTML > calculate(dog.rating, dog2.rating, true)) {
-		// 	setTimeout(function() { leftText.innerHTML--; }, 100);
-		// }
-		// while (rightText.innerHTML < calculate(dog2.rating, dog.rating, true)) {
-		// 	setTimeout(function() { rightText.innerHTML++; }, 100);
-		// }
-		// loadNewMatchup(true);
-    };
+		leftWins();
+	};
 });
+
+function leftWins() {
+	if (leftText.innerHTML > calculate(dog.rating, dog2.rating, true)) {
+		setTimeout(function() { leftText.innerHTML--; }, 100);
+		leftWins();
+	}
+	if (rightText.innerHTML < calculate(dog2.rating, dog.rating, true)) {
+		setTimeout(function() { rightText.innerHTML++; }, 100);
+		leftWins();
+	}
+	loadNewMatchup(true);
+}
 
 window.addEventListener('load', function() {
     document.getElementById("right-image").onclick = function(event) {
         alert("This was my senior quote");
     };
 });
-
 
 function calculate(left, right, bool) {
     return left - 15;
