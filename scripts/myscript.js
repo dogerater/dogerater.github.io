@@ -52,6 +52,7 @@ window.addEventListener('load', function() {
 		leftText.innerHTML = dog.rating;
 		rightText.innerHTML = dog2.rating;
 		leftWins();
+		loadNewMatchup(true);
 	};
 });
 
@@ -62,7 +63,6 @@ function leftWins() {
 	if (rightText.innerHTML < calculate(dog2.rating, dog.rating, true)) {
 		setTimeout(function() { rightText.innerHTML++; leftWins(); }, 100);
 	}
-	loadNewMatchup(true);
 }
 
 window.addEventListener('load', function() {
