@@ -53,6 +53,8 @@ window.addEventListener('load', function() {
     leftImage.onclick = function(event) {
 		leftText.innerHTML = dog.rating;
 		rightText.innerHTML = dog2.rating;
+		dog.rating = calculate(dog.rating, dog2.rating, true);
+		dog2.rating = calculate(dog2.rating, dog.rating, true);
 		leftWins();
 		vs.innerHTML = "Next";
 	};
