@@ -1,4 +1,4 @@
-window.addEventListener('load', function() {
+document.addEventListener("DOMContentLoaded", function(event) {
     document.getElementById("game-wrapper").style.height = (document.body.clientHeight - document.getElementById("menu").clientHeight).toString() + "px";
 });
 
