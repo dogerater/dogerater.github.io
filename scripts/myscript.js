@@ -2,53 +2,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.getElementById("game-wrapper").style.height = (document.body.clientHeight - document.getElementById("menu").clientHeight).toString() + "px";
 });
 
-class Dog {
-	constructor(rating, gamesPlayed, kFactor, wPerc, image) {
-		this._rating = rating;
-		this._gamesPlayed = gamesPlayed;
-		this._kFactor = kFactor;
-		this._wPerc = wPerc;
-		this._image = image;
-	}
-	get rating() {
-		return this._rating;
-	}
-	get gamesPlayed() {
-		return this._gamesPlayed;
-	}
-	get kFactor() {
-		return this._kFactor;
-	}
-	get wPerc() {
-		return this._wPerc;
-	}
-	get image() {
-		return this._image;
-	}
-	set rating(x) {
-		this._rating = x;
-	}
-	set gamesPlayed(x) {
-		this._gamesPlayed = x;
-	}
-	set kFactor(x) {
-		this._kFactor = x;
-	}
-	set wPerc(x) {
-		this._wPerc = x;
-	}
-	set image(x) {
-		this._image = x;
-	}
+let dog = {
+    rating:1500,
+	gamesPlayed:10,
+    kfactor:30,
+    wPerc:0.8,
+    image:"/images/dog1/jpeg"
 }
-// DECLARING VARIABLES
-var dog = new Dog(1500, 10, 30, 0.8, "/images/dog1.jpeg");
-var dog2 = new Dog(1200, 4, 25, 0.8, "/images/dog2.jpeg");
 
-var leftText = document.getElementById("dog-1-text");
-var rightText = document.getElementById("dog-2-text");
-var vs = document.getElementById("vs");
-var leftImage = document.getElementById("left-image");
+let dog2 = {
+	rating:1200,
+	gamesPlayed:4,
+    kfactor:25,
+    wPerc:0.8,
+    image:"/images/dog1/jpeg"
+}
+
+let leftText = document.getElementById("dog-1-text");
+let rightText = document.getElementById("dog-2-text");
+let vs = document.getElementById("vs");
+let leftImage = document.getElementById("left-image");
 window.addEventListener('load', function() {
     leftImage.onclick = function(event) {
 		leftText.innerHTML = dog.rating;
