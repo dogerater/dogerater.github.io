@@ -19,10 +19,11 @@ let rightDog = {
 }
 
 let state = "game";
-const leftText = document.getElementById("dog-1-text");
-const rightText = document.getElementById("dog-2-text");
+const leftText = document.getElementById("left-dog-text");
+const rightText = document.getElementById("right-dog-text");
 const vs = document.getElementById("vs");
 const leftImage = document.getElementById("left-image");
+const rightImage = document.getElementById("right-image");
 
 // ----------- HELPER FUNCTIONS ---------------- //
 
