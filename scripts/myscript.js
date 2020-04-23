@@ -84,7 +84,7 @@ function spin(leftRating, rightRating, leftWins) {
  * Purpose: changes the screen so the user knows to choose a new match
  * Input: null
  */
-function changeScreen() {
+function changeState() {
 	vs.innerHTML = "Click to Load New Match"
 	state = "results";
 }
@@ -127,21 +127,25 @@ function updateDogs(leftWins) {
 
 window.addEventListener('load', (event) => {
     leftImage.onclick = (event) => {
-		leftText.innerHTML = leftDog.rating;
-		rightText.innerHTML = rightDog.rating;
-		updateDogs(true);
-		spin(leftDog.rating, rightDog.rating, true);
-		changeScreen();
+		if (state == "game") {
+			leftText.innerHTML = leftDog.rating;
+			rightText.innerHTML = rightDog.rating;
+			updateDogs(true);
+			spin(leftDog.rating, rightDog.rating, true);
+			changeState();
+		}
 	}
 })
 
 window.addEventListener('load', (event) => {
     rightImage.onclick = (event) => {
-		leftText.innerHTML = leftDog.rating;
-		rightText.innerHTML = rightDog.rating;
-		updateDogs(false);
-		spin(leftDog.rating, rightDog.rating, false);
-		changeScreen();
+		if (state == "game") {
+			leftText.innerHTML = leftDog.rating;
+			rightText.innerHTML = rightDog.rating;
+			updateDogs(false);
+			spin(leftDog.rating, rightDog.rating, false);
+			changeState();
+		}
 	}
 })
 
