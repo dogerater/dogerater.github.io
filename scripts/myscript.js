@@ -1,7 +1,3 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-    correctHeight();
-})
-
 // -------------- VARIABLES ---------------------- //
 
 let leftDog = {
@@ -168,3 +164,17 @@ window.addEventListener('load', (event) => {
 		}
 	}
 })
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    correctHeight();
+})
+
+window.onorientationchange = () => {
+	correctHeight()
+	// var orientation = window.orientation; 
+	// 	switch(orientation) { 
+	// 		case 0:
+	// 		case 90:
+	// 		case -90: window.location.reload(); 
+	// 		break; }
+}
