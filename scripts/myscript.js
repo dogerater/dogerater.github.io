@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-    document.getElementById("game-wrapper").style.height = (document.body.clientHeight - document.getElementById("menu").clientHeight).toString() + "px";
+    correctHeight();
 })
 
 // -------------- VARIABLES ---------------------- //
@@ -27,6 +27,13 @@ const rightImage = document.getElementById("right-image");
 
 // ----------- HELPER FUNCTIONS ---------------- //
 
+/*
+ * Purpose: makes the height fit the screen
+ * Input: null
+ */
+function correctHeight() {
+	document.getElementById("game-wrapper").style.height = (document.body.clientHeight - document.getElementById("menu").clientHeight).toString() + "px";
+}
 /*
  * Purpose: returns the k-value of the dog it is inputed.
  * Input: a dog
@@ -97,7 +104,7 @@ function changeState() {
 function calculate(curr, opp, gameResult) {
 	kValue = getK(curr);
 	likelihood = probability(curr.rating, opp.rating);
-	changeInRating = (gameResult - likelihood) * kValue;
+	changeInRating = Math.round((gameResult - likelihood) * kValue);
     return curr.rating + changeInRating;
 }
 
