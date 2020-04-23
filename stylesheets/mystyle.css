@@ -48,4 +48,5 @@ img {
     left: 50%;
     text-transform: uppercase;
     background-color: #fff;
+    max-width: 20%;
 }

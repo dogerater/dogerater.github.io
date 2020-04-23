@@ -153,6 +153,7 @@ window.addEventListener('load', (event) => {
 			vs.innerHTML = "Vs";
 			leftText.innerHTML = '';
 			rightText.innerHTML = '';
+			state = "game";
 		}
 	}
 })
