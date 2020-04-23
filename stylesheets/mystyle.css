@@ -38,10 +38,10 @@ img {
     transform: translate(-50%, -50%);
     font-size: xx-large;
 }
-#dog-1-text {
+#left-dog-text {
     left: 25%;
 }
-#dog-2-text {
+#right-dog-text {
     left: 75%;
 }
 #vs {
