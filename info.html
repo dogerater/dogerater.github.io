@@ -32,10 +32,13 @@
             Today, the ELO system has been expanded to assess performance and relative strength in a variety of competitive pursuits including the NBA, MLB,  NFL, MLS, as well as in e-sports. 
         </p>
         <p>
-            In our game, the dogs being compared have been assigned a baseline ELO rating based on an algorithmic analysis. Your selection of which dog is cuter in a head-to-head matchup leads to a correction in their ELO ratings according to the following formula.
+            In our game, the dogs being compared have been assigned a baseline ELO rating based on an algorithmic analysis. Your selection of which dog is cuter in a head-to-head matchup leads to a correction in their ELO ratings according to the following variables and formula.
         </p>
         <p>
-            [Result of the game (1 for a "win" against another dog and 0 for a "loss") - Expected Probability] * k-Factor (which is a value dependent on rating, win percentage, and number of competitive "matches"). Where Expected Probability is given by 1/(1+10 <sup>(opponentRating - yourRating)/400</sup>).
+            Here are the varibales. Game result is 1 for a "win" against another dog and 0 for a "loss". Expected Probability is given by 1/(1+10 <sup>(opponentRating - yourRating)/400</sup>). k-Factor is a value dependent on rating, win percentage, and number of competitive "matches".
+        </p>
+        <p>
+            New Rating = Old Rating + (Game result - Expected Probability) * k-Factor
         </p>
         <p>
             Example: If dog A has ELO = 1600 and is chosen as cuter than dog B with ELO = 1200, then 
