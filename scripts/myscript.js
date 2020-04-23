@@ -170,11 +170,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
 })
 
 window.onorientationchange = () => {
-	correctHeight()
-	// var orientation = window.orientation; 
-	// 	switch(orientation) { 
-	// 		case 0:
-	// 		case 90:
-	// 		case -90: window.location.reload(); 
-	// 		break; }
+	var orientation = window.orientation; 
+		switch(orientation) { 
+			case 0:
+			case 90:
+			case -90: window.location.reload(); 
+			break; }
 }
+
+// window.addEventListener("orientationchange", function() {
+//         console.log(screen.orientation);
+// }, false);
+
+// if (window.DeviceOrientationEvent) {
+//     window.addEventListener('orientationchange', function() { location.reload(); }, false);
+// }
