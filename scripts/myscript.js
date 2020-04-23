@@ -148,12 +148,6 @@ window.addEventListener('load', (event) => {
 
 window.addEventListener('load', (event) => {
     rightImage.onclick = (event) => { choose(false); }
-
-    leftImage.onclick = choose(true);
-})
-
-window.addEventListener('load', (event) => {
-    rightImage.onclick = choose(false);
 })
 
 window.addEventListener('load', (event) => {
