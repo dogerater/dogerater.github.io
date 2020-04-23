@@ -143,19 +143,17 @@ function choose(bool) {
 // ---------------- HANDLERS ---------------------- //
 
 window.addEventListener('load', (event) => {
-<<<<<<< HEAD
     leftImage.onclick = (event) => { choose(true); }
 })
 
 window.addEventListener('load', (event) => {
     rightImage.onclick = (event) => { choose(false); }
-=======
+
     leftImage.onclick = choose(true);
 })
 
 window.addEventListener('load', (event) => {
     rightImage.onclick = choose(false);
->>>>>>> 8ba8425ac75524a013ec89b82d2716d80493e00f
 })
 
 window.addEventListener('load', (event) => {
