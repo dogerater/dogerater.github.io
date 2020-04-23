@@ -140,20 +140,22 @@ function choose(bool) {
 	}
 }
 
-// ---------------- HANDLERS ---------------------- //
-
-window.addEventListener('load', (event) => {
-	vs.onclick = (event) => {
-		if (state == "results") {
-			leftImage.src = "/images/dog2.jpeg";
-			rightImage.src = "/images/dog1.jpeg";
-			vs.innerHTML = "Vs";
-			leftText.innerHTML = '';
-			rightText.innerHTML = '';
-			state = "game";
-		}
+/* 
+ * Purpose: handles what the vs div does when you click it
+ * Input: null
+ */
+function next() {
+	if (state == "results") {
+		leftImage.src = "/images/dog2.jpeg";
+		rightImage.src = "/images/dog1.jpeg";
+		vs.innerHTML = "Vs";
+		leftText.innerHTML = '';
+		rightText.innerHTML = '';
+		state = "game";
 	}
-})
+}
+
+// ---------------- HANDLERS ---------------------- //
 
 document.addEventListener("DOMContentLoaded", (event) => {
     correctHeight();
