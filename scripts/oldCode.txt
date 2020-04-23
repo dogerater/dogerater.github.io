@@ -41,3 +41,31 @@ class Dog {
 // DECLARING VARIABLES
 var dog = new Dog(1500, 10, 30, 0.8, "/images/dog1.jpeg");
 var dog2 = new Dog(1200, 4, 25, 0.8, "/images/dog2.jpeg");
+
+if (leftText.innerHTML > left) {
+	setTimeout(() => { 
+		leftText.innerHTML--; 
+		spin(left, right, which); 
+	}, 100);
+	leftText.innerHTML--; 
+}
+if (rightText.innerHTML < right) {
+	setTimeout(() => { 
+		rightText.innerHTML++; 
+		spin(left, right, which); 
+	}, 100);
+	rightText.innerHTML++; 
+}
+
+if (leftText.innerHTML < left) {
+	setTimeout(() => { 
+		leftText.innerHTML++; 
+		spin(left, right, which); 
+	}, 100);
+}
+if (rightText.innerHTML > right) {
+	setTimeout(() => { 
+		rightText.innerHTML--; 
+		spin(left, right, which); 
+	}, 100);
+}
