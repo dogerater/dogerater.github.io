@@ -143,14 +143,6 @@ function choose(bool) {
 // ---------------- HANDLERS ---------------------- //
 
 window.addEventListener('load', (event) => {
-    leftImage.onclick = (event) => { choose(true); }
-})
-
-window.addEventListener('load', (event) => {
-    rightImage.onclick = (event) => { choose(false); }
-})
-
-window.addEventListener('load', (event) => {
 	vs.onclick = (event) => {
 		if (state == "results") {
 			leftImage.src = "/images/dog2.jpeg";

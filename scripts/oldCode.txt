@@ -69,3 +69,13 @@ if (rightText.innerHTML > right) {
 		spin(left, right, which); 
 	}, 100);
 }
+
+
+
+window.addEventListener('load', (event) => {
+    leftImage.onclick = (event) => { choose(true); }
+})
+
+window.addEventListener('load', (event) => {
+    rightImage.onclick = (event) => { choose(false); }
+})
