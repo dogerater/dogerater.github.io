@@ -111,47 +111,43 @@ function calculate(curr, opp, gameResult) {
  * GamesWon must be updated before games played bc it relies on games played
  */
 function updateDogs(leftWins) {
-	if (leftWins) {
-		leftDog.rating = calculate(leftDog, rightDog, 1);
-		rightDog.rating = calculate(rightDog, leftDog, 0);
-		leftGamesWon = (leftDog.gamesPlayed * leftDog.wPerc) + 1;
-		rightGamesWon = (rightDog.gamesPlayed * rightDog.wPerc);
-	} else {
-		leftDog.rating = calculate(leftDog, rightDog, 0);
-		rightDog.rating = calculate(rightDog, leftDog, 1);
-		leftGamesWon = (leftDog.gamesPlayed * leftDog.wPerc);
-		rightGamesWon = (rightDog.gamesPlayed * rightDog.wPerc) + 1;
-	}
+	leftResult = Number(leftWins); // this turns true into 1, and false into 0
+	rightResult = Number(!leftWins); // this turns true into 1, and false into 0
+	
+	leftDog.rating = calculate(leftDog, rightDog, leftResult);
+	rightDog.rating = calculate(rightDog, leftDog, rightResult);
+
+	leftGamesWon = (leftDog.gamesPlayed * leftDog.wPerc) + leftResult;
+	rightGamesWon = (rightDog.gamesPlayed * rightDog.wPerc) + rightResult;
+
 	leftDog.gamesPlayed++;
 	rightDog.gamesPlayed++;
 	leftDog.wPerc = leftGamesWon / leftDog.gamesPlayed;
 	rightDog.wPerc = rightGamesWon / rightDog.gamesPlayed;
 }
 
+/*
+ * Purpose: factors out code from handlers
+ * Input: boolean for whether left or right won
+ */
+function choose(bool) {
+	if (state == "game") {
+		leftText.innerHTML = leftDog.rating;
+		rightText.innerHTML = rightDog.rating;
+		updateDogs(bool);
+		spin(leftDog.rating, rightDog.rating, bool);
+		changeState();
+	}
+}
+
 // ---------------- HANDLERS ---------------------- //
 
 window.addEventListener('load', (event) => {
-    leftImage.onclick = (event) => {
-		if (state == "game") {
-			leftText.innerHTML = leftDog.rating;
-			rightText.innerHTML = rightDog.rating;
-			updateDogs(true);
-			spin(leftDog.rating, rightDog.rating, true);
-			changeState();
-		}
-	}
+    leftImage.onclick = choose(true);
 })
 
 window.addEventListener('load', (event) => {
-    rightImage.onclick = (event) => {
-		if (state == "game") {
-			leftText.innerHTML = leftDog.rating;
-			rightText.innerHTML = rightDog.rating;
-			updateDogs(false);
-			spin(leftDog.rating, rightDog.rating, false);
-			changeState();
-		}
-	}
+    rightImage.onclick = choose(false);
 })
 
 window.addEventListener('load', (event) => {
