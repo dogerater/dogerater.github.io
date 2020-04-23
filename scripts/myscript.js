@@ -25,7 +25,6 @@ const rightImage = document.getElementById("right-image");
 
 /*
  * Purpose: makes the height fit the screen
- * Input: null
  */
 function correctHeight() {
 	document.getElementById("game-wrapper").style.height = (document.body.clientHeight - document.getElementById("menu").clientHeight).toString() + "px";
@@ -84,15 +83,6 @@ function spin(leftRating, rightRating, leftWins) {
 }
 
 /*
- * Purpose: changes the screen so the user knows to choose a new match
- * Input: null
- */
-function changeState() {
-	vs.innerHTML = "Click to Load New Match"
-	state = "results";
-}
-
-/*
  * Purpose: calculates the new rating for a dog
  * Input: two dogs and an int, in the order <dog we want>, <opponent> regardless of right and left.
  * the int is 1 if the current dog won and 0 if the current dog lost
@@ -136,7 +126,8 @@ function choose(bool) {
 		rightText.innerHTML = rightDog.rating;
 		updateDogs(bool);
 		spin(leftDog.rating, rightDog.rating, bool);
-		changeState();
+		vs.innerHTML = "Click to Load New Match"
+		state = "results";
 	}
 }
 
