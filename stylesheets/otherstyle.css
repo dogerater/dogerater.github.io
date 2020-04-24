@@ -28,6 +28,7 @@ nav a {
     margin-left: 22%;
     margin-right: 22%;
     margin-bottom: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
