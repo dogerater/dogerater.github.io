@@ -24,7 +24,7 @@ nav a {
     text-decoration: none;
     text-transform: uppercase;
 }
-#text {
+.text {
     margin-left: 22%;
     margin-right: 22%;
     margin-bottom: 10%;
@@ -34,4 +34,8 @@ nav a {
 p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16pt;
+}
+#preview {
+    height: 0;
+    width: 0;
 }

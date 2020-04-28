@@ -14,11 +14,17 @@
         <a href="rankings.html">Rankings</a>
     </nav>
 
-    <div id="text">
+    <div class="text">
         <h1>Upload Your Dog</h1>
         <form enctype="multipart/form-data" action="/upload/image" method="post">
-            <input id="image-file" type="file" />
+            <input id="image-file" type="file" accept="image/*" />
+            <!-- <input id="text-name" type="text" /> -->
         </form>
+        <div id="preview"></div>
+        <h1>How To Upload</h1>
+        <p>
+            The 'Choose File' button will accept all image input, but for security reasons, we only accept .jpeg files (this includes .jpg, .jpeg, .JPG, and .JPEG). This way, the page loads quickly, and we can keep our image database open to everyone. On that note, we only accept plain text in the name box. So all normal characters are allowed
+        </p>
 
         <h1>Rankings</h1>
     </div>
