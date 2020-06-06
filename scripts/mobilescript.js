@@ -7,3 +7,5 @@ function iOS() {
         elem.style.marginRight = "0%";
     }
 }
+
+window.onorientationchange = function() { window.location.reload(); };
