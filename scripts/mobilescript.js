@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", iOS()}
+document.addEventListener("DOMContentLoaded", iOS());
 
 function iOS() {
     console.log("yeehaw")
