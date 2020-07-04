@@ -121,7 +121,7 @@ function updateDogs(leftWins) {
  * Input: boolean for whether left or right won
  */
 function choose(bool) {
-	if (state == "game") {
+	if (state === "game") {
 		leftText.innerHTML = leftDog.rating;
 		rightText.innerHTML = rightDog.rating;
 		updateDogs(bool);
@@ -136,7 +136,7 @@ function choose(bool) {
  * Input: null
  */
 function next() {
-	if (state == "results") {
+	if (state === "results") {
 		leftImage.src = "/images/dog2.jpeg";
 		rightImage.src = "/images/dog1.jpeg";
 		vs.innerHTML = "Vs";
