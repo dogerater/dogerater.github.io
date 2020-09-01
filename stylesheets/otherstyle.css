@@ -2,7 +2,8 @@ html {
     overflow-y: scroll;
 }
 html, body {
-    background-color: #7dc9ff;
+    /* background-color: #7dc9ff; */
+    background-color: #fff;
     margin: 0px;
     padding: 0px;
     border-width: 0px;
@@ -28,9 +29,9 @@ nav a {
     text-transform: uppercase;
 }
 .text {
-    margin: 0% 22% 5%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
-    padding: 2%;
+    max-width: 620px;
+    margin: auto;
+    padding: 0 20px;
 }
 p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
