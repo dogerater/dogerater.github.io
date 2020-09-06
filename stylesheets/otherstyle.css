@@ -29,9 +29,10 @@ nav a {
     text-transform: uppercase;
 }
 .text {
+    display: flex;
+    flex-direction: column;
     max-width: 620px;
-    margin: auto;
-    padding: 0 20px;
+    margin: 0 20px;
 }
 p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
