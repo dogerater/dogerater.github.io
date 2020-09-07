@@ -33,7 +33,7 @@ nav a {
     text-decoration: none;
     text-transform: uppercase;
 }
-.text {
+article {
     max-width: 620px;
     margin: 0 20px;
 }
