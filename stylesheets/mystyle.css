@@ -29,25 +29,23 @@ nav a {
     position: relative;
 }
 img {
+    max-width: 100%;
+}
+.img-wrapper {
     max-width: 50%;
     float: left;
     min-width: 600px;
+    position: relative;
 }
 .text {
     top: 50%;
+    left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
     font-size: xx-large;
     text-align: center;
 }
-#left-dog-text {
-    left: 25%;
-}
-#right-dog-text {
-    left: 75%;
-}
 #vs {
-    left: 50%;
     text-transform: uppercase;
     background-color: #fff;
     max-width: 20%;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="Free dog rating game">
@@ -10,25 +10,29 @@
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     <title>DOGERATER</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/mystyle.css">
-</head>
+  </head>
 
-<body>
+  <body>
     <nav id="menu">
-        <a href="info.html">Info</a>
-        <a href="index.html">Game</a>
-        <a href="rankings.html">Rankings</a>
+      <a href="info.html">Info</a>
+      <a href="index.html">Game</a>
+      <a href="rankings.html">Rankings</a>
     </nav>
 
     <div id="game-wrapper">
+      <div class="img-wrapper">
         <img id="left-image" src="/images/dog1.jpeg" alt="picture of a dog" onclick="choose(true)">
-        <img id="right-image" src="/images/dog2.jpeg" alt="picture of a dog" onclick="choose(false)">
-        <div id="vs" class="text" onclick="next()">Vs</div>
         <div id="left-dog-text" class="text"></div>
+      </div>
+      <div class="img-wrapper">
+        <img id="right-image" src="/images/dog2.jpeg" alt="picture of a dog" onclick="choose(false)">
         <div id="right-dog-text" class="text"></div>
+      </div>
+      <div id="vs" class="text" onclick="next()">Vs</div>
     </div>
 
     <script src="/scripts/myscript.js"></script>
     <script src="/scripts/mobilescript.js"></script>
-</body>
+  </body>
 
 </html>
